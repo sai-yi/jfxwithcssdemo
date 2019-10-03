@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.web.WebView?>
+<GridPane fx:id="gridPane" fx:controller="zero.saiyi.cssdemo.SimpleController" xmlns:fx="http://javafx.com/fxml/1"
+     vgap="10" hgap="10" alignment="CENTER"	stylesheets="@buttonstyle.css">
+	<!-- TODO Add Nodes -->
+	<Button fx:id="open_file" onAction="#openFileHandle" text="Open file" GridPane.columnIndex="0"></Button>
+	<Button fx:id="open_dir" text="Open Dir" onAction="#openDirHandle" GridPane.columnIndex="1"></Button>
+	<Button text="Rotate Button" rotate="-15.0" GridPane.columnIndex="2"></Button>
+	<Button text="Rotate Shadow" fx:id="shadow_btn" rotate="15.0" id="button_blue" GridPane.columnIndex="3"></Button>
+	<Button fx:id="z_in_btn" text="Button Zoom In" GridPane.columnIndex="4" 
+	onMouseEntered="#handleMouseDragOver" onMouseExited="#handleMouseDragExited"></Button>
+	
+	<Button text="Save File" GridPane.rowIndex="1" fx:id="save_btn" onAction="#saveFileHandle"></Button>
+	<Hyperlink text="openjfx.io" onAction="#linkClickHandle" GridPane.rowIndex="1" GridPane.columnIndex="1"></Hyperlink>
+	
+	<WebView fx:id="webView" GridPane.rowIndex="2" GridPane.columnSpan="5" GridPane.rowSpan="4"/>
+</GridPane>
+
